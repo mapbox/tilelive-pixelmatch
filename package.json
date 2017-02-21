@@ -1,0 +1,30 @@
+{
+  "name": "@mapbox/tilelive-pixelmatch",
+  "version": "0.1.0",
+  "description": "Visually diff your raster tiles!",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.1.5",
+    "pixelmatch": "^4.0.2",
+    "commander": "^2.9.0",
+    "pngjs": "^3.0.1",
+    "url": "^0.11.0"
+  },
+  "peerDependencies": {
+    "tilelive": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/tilelive-pixelmatch.git"
+  },
+  "author": "",
+  "license": "BSD-3",
+  "bugs": {
+    "url": "https://github.com/mapbox/tilelive-pixelmatch/issues"
+  },
+  "homepage": "https://github.com/mapbox/tilelive-pixelmatch#readme"
+}
