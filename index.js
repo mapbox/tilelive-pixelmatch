@@ -131,4 +131,6 @@ module.exports = function(tilelive, opts) {
     console.log('I got registered!')
     tilelive.protocols["pixelmatch:"] = Pixelmatch;
   };
+
+  return Pixelmatch;
 };
