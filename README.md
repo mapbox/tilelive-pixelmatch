@@ -1,10 +1,12 @@
 # tilelive-pixelmatch
 
-*Work in progress*
-
 A readonly tilelive source for visually diffing two raster tile sources using [pixelmatch](https://github.com/mapbox/pixelmatch). This enables visual regression testing for maps.
 
-![Browsable map diff](http://lukasmartinelli.ch/media/osm_bright_visual_diff.gif)
+## Use Cases
+
+### Validate Boundary Changes in OSM
+
+![Browsable map diff](https://cloud.githubusercontent.com/assets/1288339/24314646/15eea404-10b9-11e7-9c83-f3bb8c863a50.png)
 
 ## Usage
 
