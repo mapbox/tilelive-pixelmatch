@@ -127,10 +127,10 @@ module.exports = function(tilelive, opts) {
     return callback && setImmediate(callback);
   };
 
-  Pixelmatch.registerProtocols = function(tilelive) {
-    console.log('I got registered!')
+  Pixelmatch.prototype.registerProtocols = function(tilelive) {
     tilelive.protocols["pixelmatch:"] = Pixelmatch;
-  };
+  }
 
+  tilelive.protocols["pixelmatch:"] = Pixelmatch;
   return Pixelmatch;
 };
