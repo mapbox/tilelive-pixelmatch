@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Visually diff your raster tiles!",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "async": "^2.1.5",
     "pixelmatch": "^4.0.2",
