@@ -7,6 +7,7 @@ const fs = require("fs");
 const async = require("async");
 
 module.exports = function(tilelive, opts) {
+
   const Pixelmatch = function(uri, callback) {
     this.uri = url.parse(uri, true);
     var self = this;
@@ -15,7 +16,8 @@ module.exports = function(tilelive, opts) {
       return setImmediate(callback, new Error("Two or more sources must be provided: " + JSON.stringify(uri)));
     }
 
-    return async.map(sourceUris, async.apply(tilelive.load), function(err, sources) {
+    sourceUris.forEach(tilelive.auto);
+    return async.map(sourceUris, tilelive.load, function(err, sources) {
       if (err) {
         return callback(err);
       }
@@ -127,10 +129,10 @@ module.exports = function(tilelive, opts) {
     return callback && setImmediate(callback);
   };
 
-  Pixelmatch.prototype.registerProtocols = function(tilelive) {
-    tilelive.protocols["pixelmatch:"] = Pixelmatch;
+  Pixelmatch.registerProtocols = function(_tilelive) {
+    _tilelive.protocols["pixelmatch:"] = Pixelmatch;
   }
 
-  tilelive.protocols["pixelmatch:"] = Pixelmatch;
+  Pixelmatch.registerProtocols(tilelive);
   return Pixelmatch;
 };
